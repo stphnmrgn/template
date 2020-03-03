@@ -1,0 +1,7 @@
+name: dl_labs_test
+dependencies:
+- python=3.7
+- shapely
+- pip
+- pip:
+    - descarteslabs
