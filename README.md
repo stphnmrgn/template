@@ -1,5 +1,5 @@
 # template
-Template repository that can be cloned within a project folder and used to create a python environment and git repository for that project. It includes the files (README, conda env yml, license, and python gitignore) to initiate a basic conda/git project. Items should be  be customized before step 3 below (i.e. update the yml file to include whatever python packages you need for reproducible projects *before* executing steps 3-5 below).
+Template repository that can be cloned within a project folder and used to create a python environment and git repository for that project. It includes the files (README, conda env yml, license, and python gitignore) to initiate a basic conda/git project. Items should be customized before step 3 below (i.e. update the yml file to include whatever python packages you need for reproducible projects *before* executing steps 3-5 below).
 
 1. Clone this repo where ever you want your project to be located.
 2. Rename the repo from `template ` to your project/feature name, and then edit the name within in the yml file to match your project name. 
