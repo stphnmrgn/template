@@ -25,7 +25,7 @@ The yml file should be customized before creating a conda environment from step 
     All together using `conda`:
     
        $ cd new_project
-       $ conda env create -f template.yml --prefix env # creates new environment from file `template.yml` in the new directory `env`
+       $ conda env create -f template.yml --prefix env    # creates new environment from file `template.yml` in the new directory `env`
        $ conda activate ./env
        $ git init
        $ git commit -m "Initial commit"
