@@ -1,5 +1,10 @@
 # template
-Template repository that can be cloned within a project folder and used to create a python environment and git repository for that project. It includes the files (README, conda env yml, license, and python gitignore) to initiate a basic conda/git project. 
+Template repository that can be cloned and used to create a python environment and git repository for a project. It includes the following files to initiate a basic conda/git project.
+
+- README
+- conda environment .yml file
+- license
+- python gitignore
 
 The yml file should be customized before creating a conda environment from step 4 below (i.e. update the yml file to include whatever python packages you need for reproducible projects *before* executing steps 4-5 below).
 
@@ -10,25 +15,20 @@ The yml file should be customized before creating a conda environment from step 
 2. Create a project folder and copy/paste the content from "template" into your project folder. Alernatively you could rename the "template" repo folder and use it as your project folder
 
        $ mkdir new_project
-       $ cd new_project
 
-3. Edit the name within in the yml file to match your project name. 
-    * The yml file is used to create a python environment, and so editing the name (first line), packages, and environment location (last line) in the yml file should be necessary every time you start a new project.
+3. Rename the conda environment using the yml file. The yml file is used to create a python environment, and so editing the name (first line), packages, and environment location (last line) in the yml file should be necessary every time you start a new project. The defaults environment name is template.
    
-4. Finally, create a conda environment, activate it, and then create & push the repository to Github
+4. Finally, changed directories to your project folder, create a conda environment & activate it, and then create & push the repository to Github
     
     All together using `conda`:
     
-       $ git clone https://github.com/stphnmrgn/template.git
-       $ mkdir new_project
        $ cd new_project
-       ...
        $ conda env create
        $ source activate template
        $ git create
        $ git push -u origin master
 
-We can remove the last line from the yml file, which specifies the path location to create the python environment, and use the same environment for multiple projects. We just need to copy and paste the yml file (with the path removed from the last line) into the parent project directory.
+Additionally, now that the inital environment is setup, we can use the same environment for multiple projects. We just need to copy and paste the yml file (with the path removed from the last line) into the parent project directory. Side note: the last line of the yml file can be used to specify the path location to create the python environment. It is removed in this template yml file.
 
     $ mkdir new_project
     $ cd new_project
