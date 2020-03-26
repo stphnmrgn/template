@@ -12,7 +12,7 @@ The yml file should be customized before creating a conda environment from step 
 
        $ git clone https://github.com/stphnmrgn/template.git
    
-2. Create a project folder and copy/paste the content from "template" into your project folder. Alernatively you could rename the "template" repo folder and use it as your project folder
+2. Create a project folder and copy/paste the content from "template" into your project folder. Alternatively you could rename the "template" repo folder and use it as your project folder
 
        $ mkdir new_project
 
