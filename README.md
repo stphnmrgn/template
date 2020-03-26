@@ -16,11 +16,11 @@ The yml file should be customized before creating a conda environment from step 
 
        $ mkdir new_project
        
-4. Copy/paste the content from "template" into your project folder. Alternatively you could rename the "template" repo folder and use it as your project folder
+4. Copy/paste the content from "template" into your project folder. Alternatively, you could rename the "template" repo folder and use it as your project folder
 
-5. Rename the conda environment in the first line of the yml file. The yml file is used to create a python environment, and so editing the name (first line), packages, and environment location (last line) in the yml file should be necessary every time you start a new project. The defaults environment name is template.
+5. Edit the conda environment in the yml file. The yml file is used to create a python environment and editing the name (first line), packages, and environment location (last line) in the yml file should be necessary every time you start a new project. The defaults environment name is template.
    
-6. Finally, changed directories to your project folder, create the conda environment & activate it, and then create & push the repository to Github
+6. Finally, change the directory to your project folder, create the conda environment & activate it, and then create & push the repository to Github
     
     All together using `conda`:
     
