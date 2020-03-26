@@ -6,19 +6,21 @@ Template repository that can be cloned and used to create a python environment a
 - license
 - python gitignore
 
-The yml file should be customized before creating a conda environment from step 4 below (i.e. update the yml file to include whatever python packages you need for reproducible projects *before* executing steps 4-5 below).
+The yml file should be customized before creating a conda environment from step 5 below (i.e. update the yml file to include whatever python packages you need for reproducible projects *before* creating the python environment.
 
 1. Clone this repo
 
        $ git clone https://github.com/stphnmrgn/template.git
    
-2. Create a project folder and copy/paste the content from "template" into your project folder. Alternatively you could rename the "template" repo folder and use it as your project folder
+2. Create a project folder
 
        $ mkdir new_project
+       
+4. Copy/paste the content from "template" into your project folder. Alternatively you could rename the "template" repo folder and use it as your project folder
 
-3. Rename the conda environment using the yml file. The yml file is used to create a python environment, and so editing the name (first line), packages, and environment location (last line) in the yml file should be necessary every time you start a new project. The defaults environment name is template.
+5. Rename the conda environment in the first line of the yml file. The yml file is used to create a python environment, and so editing the name (first line), packages, and environment location (last line) in the yml file should be necessary every time you start a new project. The defaults environment name is template.
    
-4. Finally, changed directories to your project folder, create a conda environment & activate it, and then create & push the repository to Github
+6. Finally, changed directories to your project folder, create the conda environment & activate it, and then create & push the repository to Github
     
     All together using `conda`:
     
