@@ -25,23 +25,20 @@ The yml file should be customized before creating a conda environment from step 
     All together using `conda`:
     
        $ cd new_project
-       $ conda env create
-       $ source activate template
-       $ git create
-       $ git push -u origin master
+       $ conda env create -f template.yml --prefix env # creates new environment from file `template.yml` in the new directory `env`
+       $ conda activate ./env
+       $ git init
+       $ git commit -m "Initial commit"
 
-Additionally, now that the inital environment is setup, we can use the same environment for multiple projects. We just need to copy and paste the yml file (with the path removed from the last line) into the parent project directory. Side note: the last line of the yml file can be used to specify the path location to create the python environment. It is removed in this template yml file.
+Additionally, now that the inital environment is setup, we can use the same environment for multiple projects. We just need to copy and paste the yml file into another project directory. Side note: the last line of the yml file can be used to specify the path location to create the python environment. It is removed in this template yml file.
 
-    $ mkdir new_project
-    $ cd new_project
+    $ cd another_project
     ... 
     copy/paste yml file
     ...
-    $ conda create --prefix env # creates a new environment directory `env` in the current directory
+    $ conda env create -f template.yml --prefix env
     $ conda activate ./env
-    $ git init
-    $ git commit -m "Initial commit"
-    
+
 ## Updating your environment
 You may need to update your environment for a variety of reasons. For example, it may be the case that:
 
