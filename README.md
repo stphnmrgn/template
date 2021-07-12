@@ -33,9 +33,10 @@ $ git create
 $ git push -u origin master
 ```
 
-Alternatively, you can chhose to create your environment within your project directory using the below. We just need to copy and paste the yml file with the path removed from the last line into the parent project directory.
+Alternatively, you can create the environment within your project directory using the below, we just need to copy and paste the yml file with the path removed from the last line into the parent project directory.
+The last line of the yml file can be used to specify the path location to create the python environment. It is removed in this template yml file.
 
-The line `conda env create -f environment.yml --prefix .\env` creates a new environment directory "env" in the current directoryThe last line of the yml file can be used to specify the path location to create the python environment. It is removed in this template yml file.
+The line `conda env create -f environment.yml --prefix .\env` creates a new environment directory "env" in the current directory
 
 ```bash
 $ mkdir new_project
