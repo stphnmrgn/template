@@ -14,33 +14,24 @@ The yml file should be customized before creating a conda environment from step 
 $ git clone https://github.com/stphnmrgn/template.git
 ```
 
-2. Create a project folder and copy/paste the content from "template" into your project folder. Alternatively you could rename the "template" repo folder and use it as your project folder
+2. Create a project folder, then copy/paste the content from "template" into your project folder. Alternatively you could rename the "template" repo folder and use it as your project folder
 
 ```bash
 $ mkdir new_project
 ```
 
-5. Edit the conda environment in the yml file. The yml file is used to create a python environment and editing the name (first line), packages, and environment location (last line) in the yml file should be necessary every time you start a new project. The defaults environment name is template.
-   
-6. Finally, change the directory to your project folder, create the conda environment & activate it, and then create & push the repository to Github
-    
-    All together using `conda`:
-```bash    
-$ cd new_project
-$ conda env create -f template.yml
-$ source activate template
-$ git create
-$ git push -u origin master
-```
+5. Edit the conda environment in the yml file. The yml file is used to create a python environment and editing the name (first line), packages, and environment location (last line) in the yml file should be necessary every time you start a new project. 
 
-Alternatively, you can create the environment within your project directory using the below, we just need to copy and paste the yml file with the path removed from the last line into the parent project directory.
 The last line of the yml file can be used to specify the path location to create the python environment. It is removed in this template yml file.
+   
+6. Finally, change the directory to your project folder, create the conda environment & activate it, and then create & push the repository to Github. The line `conda env create -f environment.yml --prefix .\env` creates a new environment titled "env" in the current directory. 
 
-The line `conda env create -f environment.yml --prefix .\env` creates a new environment directory "env" in the current directory
+Here the `template.yml` file is renamed to `environment.yml`
+    
+All together using `conda`:
 
-```bash
-$ mkdir new_project
-$ cd new_project # copy/paste yml file into project directory
+```bash    
+$ cd new_project # copy/paste and edit yml file in project directory
 $ conda env create -f environment.yml --prefix .\env
 $ conda activate ./env
 $ git init
