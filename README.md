@@ -20,15 +20,11 @@ $ git clone https://github.com/stphnmrgn/template.git
 $ mkdir new_project
 ```
 
-5. Edit the conda environment in the yml file. The yml file is used to create a python environment and editing the name (first line), packages, and environment location (last line) in the yml file should be necessary every time you start a new project. 
-
-The last line of the yml file can be used to specify the path location to create the python environment. It is removed in this template yml file.
+3. Edit the conda environment in the yml file. The yml file is used to create a python environment and editing the name (first line), packages, and environment location (last line) in the yml file should be necessary every time you start a new project. The last line of the yml file can be used to specify the path location to create the python environment. It is removed in this template yml file.
    
-6. Finally, change the directory to your project folder, create the conda environment & activate it, and then create & push the repository to Github. The line `conda env create -f environment.yml --prefix .\env` creates a new environment titled "env" in the current directory. 
-
-Here the `template.yml` file is renamed to `environment.yml`
+4. Finally, change the directory to your project folder, create the conda environment & activate it, and then create & push the repository to Github. The line `conda env create -f environment.yml --prefix .\env` creates a new environment titled "env" in the current directory. Here the `template.yml` file is renamed to `environment.yml`
     
-All together using `conda`:
+    All together using `conda`:
 
 ```bash    
 $ cd new_project # copy/paste and edit yml file in project directory
