@@ -10,36 +10,70 @@ The yml file should be customized before creating a conda environment from step 
 
 1. Clone this repo
 
-       $ git clone https://github.com/stphnmrgn/template.git
-   
+```bash
+$ git clone https://github.com/stphnmrgn/template.git
+```
+
 2. Create a project folder and copy/paste the content from "template" into your project folder. Alternatively you could rename the "template" repo folder and use it as your project folder
 
-       $ mkdir new_project
+```bash
+$ mkdir new_project
+```
 
 3. Rename the conda environment using the yml file. The yml file is used to create a python environment, and so editing the name (first line), packages, and environment location (last line) in the yml file should be necessary every time you start a new project. The defaults environment name is template.
    
 4. Finally, changed directories to your project folder, create a conda environment & activate it, and then create & push the repository to Github
     
     All together using `conda`:
-    
-       $ cd new_project
-       $ conda env create
-       $ source activate template
-       $ git create
-       $ git push -u origin master
+```bash    
+$ cd new_project
+$ conda env create -f template.yml
+$ source activate template
+$ git create
+$ git push -u origin master
+```
 
-Additionally, now that the inital environment is setup, we can use the same environment for multiple projects. We just need to copy and paste the yml file (with the path removed from the last line) into the parent project directory. Side note: the last line of the yml file can be used to specify the path location to create the python environment. It is removed in this template yml file.
+Alternatively, you can chhose to create your environment within your project directory using the below. We just need to copy and paste the yml file with the path removed from the last line into the parent project directory.
 
-    $ mkdir new_project
-    $ cd new_project
-    ... 
-    copy/paste yml file
-    ...
-    $ conda create --prefix env # creates a new environment directory `env` in the current directory
-    $ conda activate ./env
-    $ git init
-    $ git commit -m "Initial commit"
-    
+The line `conda env create -f environment.yml --prefix .\env` creates a new environment directory "env" in the current directoryThe last line of the yml file can be used to specify the path location to create the python environment. It is removed in this template yml file.
+
+```bash
+$ mkdir new_project
+$ cd new_project # copy/paste yml file into project directory
+$ conda env create -f environment.yml --prefix .\env
+$ conda activate ./env
+$ git init
+$ git commit -m "Initial commit"
+```
+
+After activating an environment using its prefix, your prompt will look similar to the following:
+
+```bash
+(/absolute/path/to/envs) $
+```
+
+This can result in long prefixes:
+
+```bash
+(/Users/USER_NAME/research/data-science/PROJECT_NAME/envs) $
+```
+
+To remove this long prefix in your shell prompt, modify the env_prompt setting in your .condarc file:
+
+```bash
+$ conda config --set env_prompt '({name})'
+```
+
+This will edit your .condarc file if you already have one or create a .condarc file if you do not.
+
+Now your command prompt will display the active environment’s generic name, which is the name of the environment's root folder:
+
+```bash
+$ cd project-directory
+$ conda activate ./env
+(env) project-directory $
+```
+
 ## Updating your environment
 You may need to update your environment for a variety of reasons. For example, it may be the case that:
 
